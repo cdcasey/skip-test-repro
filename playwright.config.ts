@@ -1,6 +1,8 @@
 import { PlaywrightTestConfig } from '@playwright/test'
 
-const baseURL = process.env.NX_APP_ORIGIN || 'http://localhost:3000/'
+const baseURL = 'http://localhost:3000/'
+// const baseURL = process.env.NX_APP_ORIGIN || 'http://localhost:3000/'
+console.log({baseURL});
 
 export const baseConfig: PlaywrightTestConfig = {
   retries: 3,
