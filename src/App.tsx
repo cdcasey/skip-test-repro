@@ -1,29 +1,26 @@
 import React, { useState } from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 
-
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <div className="App">
-      <button onClick={() => setLoggedIn(!loggedIn)}>
-        {loggedIn ? 'Log Out' : 'Log In'}
-      </button>
+      <button onClick={() => setLoggedIn(!loggedIn)}>{loggedIn ? 'Log Out' : 'Log In'}</button>
 
       {loggedIn && (
-       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="dashboard" element={<Dashboard />} />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="dashboard" element={<Dashboard />} />
 
-          {/* Using path="*"" means "match anything", so this route
+            {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
                 routes for. */}
-          <Route path="*" element={<NoMatch />} />
-        </Route>
-      </Routes>
+            <Route path="*" element={<NoMatch />} />
+          </Route>
+        </Routes>
       )}
     </div>
   );
