@@ -9,7 +9,6 @@ export class LoginPage {
 
   async goto(): Promise<void> {
     await this.page.goto('/');
-    await this.page.reload();
     await this.loginButton.click();
   }
 }
