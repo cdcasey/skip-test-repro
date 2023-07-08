@@ -8,14 +8,10 @@ test('about test 2', async ({ aboutPage }) => {
   await expect(aboutPage.page.getByText('is')).toBeVisible();
 });
 
-test('about test 3', async ({ aboutPage }) => {
+test('about test 3 should fail', async ({ aboutPage }) => {
   await expect(aboutPage.page.getByText('This is the home page')).toBeVisible();
 });
 
 test('about test 4', async ({ aboutPage }) => {
-  await expect(aboutPage.page.getByText('This is the home page')).toBeVisible();
-});
-
-test('about test 5', async ({ aboutPage }) => {
-  await expect(aboutPage.page.getByText('This is the home page')).toBeVisible();
+  await expect(aboutPage.page.getByText('about page')).toBeVisible();
 });
