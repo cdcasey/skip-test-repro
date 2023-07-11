@@ -1,10 +1,8 @@
 # Playwright fixture fail
 
-This is an example of how I thought fixtures were supposed to be used but then found out I was very wrong.
+This is an example of how one failing test causes the rest to be skipped.
 
-My assumption is that by using the login page in every fixture, my tests were not actually isolated.
-
-I was planning on converting to storage state anyway.
+I assume I am using fixtures correctly, although there are plans to soon use storage state to manage logins.
 
 To run:
 
