@@ -1,4 +1,4 @@
-# Playwright fixture fail
+# Playwright test fails and then the rest of the tests are skipped
 
 This is an example of how one failing test causes the rest to be skipped.
 
